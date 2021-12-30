@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="22yj5TPLbZhwTC45vDS4FcX81ms" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="" />
+      <created>1640816537088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640816537088</updated>
+      <workItem from="1640816575082" duration="5999000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1640821803807">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640821803807" />
+    <state width="1876" height="187" key="GridCell.Tab.0.bottom" timestamp="1640817594890">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640817594890" />
+    <state width="1876" height="187" key="GridCell.Tab.0.center" timestamp="1640817594889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640817594889" />
+    <state width="1876" height="187" key="GridCell.Tab.0.left" timestamp="1640817594889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640817594889" />
+    <state width="1876" height="187" key="GridCell.Tab.0.right" timestamp="1640817594889">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640817594889" />
+    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1640819785897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640819785897" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1640816853522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640816853522" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1640821320014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640821320014" />
+  </component>
+</project>
