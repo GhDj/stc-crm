@@ -32,3 +32,8 @@ Route::group(['middleware' => 'role:developer'], function() {
     });
 
 });
+
+Route::group(['middleware' => 'role:agent', 'prefix' => 'prospect', 'as' => 'prospect.'], function () {
+   Route::get('create', 'Agent\ProspectController@create')->name('create');
+   Route::post('create', 'Agent\ProspectController@store')->name('store');
+});
