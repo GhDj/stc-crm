@@ -37,3 +37,7 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'prospect', 'as' => 'pro
    Route::get('create', 'Agent\ProspectController@create')->name('create');
    Route::post('create', 'Agent\ProspectController@store')->name('store');
 });
+
+Route::group(['middleware' => 'role:agent', 'prefix' => 'rdv', 'as' => 'rdv.'], function () {
+    Route::post('create', 'Agent\RdvController@store')->name('store');
+});

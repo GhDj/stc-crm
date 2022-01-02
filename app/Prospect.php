@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prospect extends Model
 {
     protected $fillable = [
+        'civilite',
         'SIREN',
         'mail',
         'tel',
@@ -20,6 +21,11 @@ class Prospect extends Model
         'ville',
         'fixe',
         'annee_de_creation',
-        'form_legale'
+        'form_legale',
+        'user_id'
     ];
+
+    function user() {
+        return $this->belongsTo(User::class);
+    }
 }

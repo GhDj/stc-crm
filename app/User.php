@@ -37,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function prospects() {
+        return $this->hasMany(Prospect::class);
+    }
+
+    function rdvs() {
+        return $this->hasMany(Rdv::class);
+    }
 }

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container shadow p-0 mb-5 rounded">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Ajouter prospect</h3>
@@ -44,20 +44,30 @@
                                     <label for="professions">Professions</label>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" aria-label=".form-select-lg example" name="civilite">
+                                        <option selected disabled>Civilité</option>
+                                        <option value="MONSIEUR">MONSIEUR</option>
+                                        <option value="MADAME">MADAME</option>
+                                    </select>
+                                    <label for="floatingSelect">Sélectionner civilité</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
                                     <label for="nom">Nom</label>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="prenom" name="prenom"
                                            placeholder="Prénom" required>
                                     <label for="nom">Prénom</label>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="role" name="role"
                                            placeholder="Rôle" required>
