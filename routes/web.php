@@ -39,5 +39,10 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'prospect', 'as' => 'pro
 });
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'rdv', 'as' => 'rdv.'], function () {
+    Route::get('/', 'Agent\RdvController@index')->name('index');
     Route::post('create', 'Agent\RdvController@store')->name('store');
+});
+
+Route::group(['middleware' => 'role:manager', 'prefix' => 'rdv', 'as' => 'rdv.'], function () {
+    Route::get('/', 'Manager\RdvController@index')->name('index');
 });

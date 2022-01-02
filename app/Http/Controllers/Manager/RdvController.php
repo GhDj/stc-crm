@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Agent;
+namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\RdvStoreRequest;
 use App\Rdv;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class RdvController extends Controller
 {
@@ -17,10 +15,8 @@ class RdvController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $rdvs = $user->rdvs()->paginate(10);
+        $rdvs = Rdv::paginate(15);
         return view('rdv.index')->with(['rdvs' => $rdvs]);
-
     }
 
     /**
@@ -30,7 +26,7 @@ class RdvController extends Controller
      */
     public function create()
     {
-        return view('rdv.create');
+        //
     }
 
     /**
@@ -39,18 +35,9 @@ class RdvController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RdvStoreRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        unset($data['agent']);
-        if (!empty($request->get('oppo')))
-        {
-            $data['rvp'] = $request->get('oppo');
-        } elseif (!empty($request->get('selectPj'))) {
-            $data['rvp'] = $request->get('selectPj');
-        }
-        $rdv = Rdv::create($data);
-        dd($rdv);
+        //
     }
 
     /**
