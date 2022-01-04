@@ -20,17 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/ProspectController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2022_01_03_235207_add_status_to_rdvs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/prospect/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/prospect/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/stc-crm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Prospect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Prospect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rdv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,6 +175,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -199,6 +202,8 @@
       <workItem from="1641163913786" duration="4228000" />
       <workItem from="1641245220595" duration="416000" />
       <workItem from="1641251690832" duration="3783000" />
+      <workItem from="1641282617468" duration="857000" />
+      <workItem from="1641285363956" duration="2536000" />
     </task>
     <task id="LOCAL-00001" summary="Rdv creation">
       <created>1641086865968</created>
@@ -251,21 +256,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822921295" />
-    <state width="1876" height="187" key="GridCell.Tab.0.bottom" timestamp="1640822981278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1876" height="284" key="GridCell.Tab.0.bottom" timestamp="1641283478885">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state width="1876" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1641283478885" />
     <state width="1876" height="187" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822981278" />
-    <state width="1876" height="187" key="GridCell.Tab.0.center" timestamp="1640822981278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1876" height="284" key="GridCell.Tab.0.center" timestamp="1641283478885">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state width="1876" height="284" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1641283478885" />
     <state width="1876" height="187" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822981278" />
-    <state width="1876" height="187" key="GridCell.Tab.0.left" timestamp="1640822981278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1876" height="284" key="GridCell.Tab.0.left" timestamp="1641283478885">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state width="1876" height="284" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1641283478885" />
     <state width="1876" height="187" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822981278" />
-    <state width="1876" height="187" key="GridCell.Tab.0.right" timestamp="1640822981278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1876" height="284" key="GridCell.Tab.0.right" timestamp="1641283478885">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state width="1876" height="284" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1641283478885" />
     <state width="1876" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822981278" />
     <state x="794" y="439" key="NewPhpFileDialog" timestamp="1641252080805">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -283,9 +292,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641079332215" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641253307859">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1641291899015">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1641291899015" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641253307859" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1640823448978">
       <screen x="0" y="0" width="1920" height="1040" />

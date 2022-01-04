@@ -45,11 +45,12 @@
                                 </li>
                             @endif
                         @else
+                            
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('rdv.index') }}">Rendez-vous</a>
+                                <a class="nav-link" href="{{ route('agent.rdv.index') }}">Rendez-vous</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('prospect.index') }}">Prospects</a>
+                                <a class="nav-link" href="{{ route('manager.prospect.index') }}">Prospects</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
