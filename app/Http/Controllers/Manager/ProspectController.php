@@ -48,7 +48,8 @@ class ProspectController extends Controller
      */
     public function show($id)
     {
-        //
+        $prospect = Prospect::findOrFail($id);
+        return view('prospect.show', ['prospect' => $prospect]);
     }
 
     /**

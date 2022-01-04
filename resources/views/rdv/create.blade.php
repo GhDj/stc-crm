@@ -10,7 +10,7 @@
 
                     </div>
                     <div class="card-body p-3">
-                        <form action="{{ route('rdv.store') }}" method="post">
+                        <form action="{{ route('agent.rdv.store') }}" method="post">
                             @csrf
                             <input type="hidden" name="prospect_id" value="{{ $prospect->id }}">
                             <input type="hidden" name="user_id" value="{{ $user_id }}">

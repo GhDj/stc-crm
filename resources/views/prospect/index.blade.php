@@ -19,7 +19,9 @@
 
                     <tr>
 
-                        <th scope="row"><a href="{{ route('prospect.show', ['id' => $prospect->id ]) }}">{{ $loop->iteration }}</a></th>
+                        <th scope="row">
+                            <a href="{{ route('manager.prospect.show', ['id' => $prospect->id ]) }}">{{ $loop->iteration }}</a>
+                        </th>
                         <td>{{ $prospect->raison_sociale }}</td>
                         <td>{{ $prospect->SIREN }}</td>
                         <td> {{ $prospect->nom }} {{ $prospect->prenom }}</td>

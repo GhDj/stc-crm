@@ -52,6 +52,7 @@ class RdvController extends Controller
         }
         $rdv = Rdv::create($data);
         dd($rdv);
+        return redirect(route('agent.prospect.index'));
     }
 
     /**
@@ -62,7 +63,8 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        //
+        $rdv = Rdv::findOrFail($id);
+        return view('rdv.show', ['rdv' => $rdv]);
     }
 
     /**

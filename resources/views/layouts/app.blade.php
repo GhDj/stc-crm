@@ -29,13 +29,14 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                @guest
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <ul class="navbar-nav ml-auto">
+
+                        <ul class="navbar-nav ml-auto">
 
                         <!-- Authentication Links -->
-                        @guest
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -44,37 +45,80 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                        </ul>
                         @else
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('agent.rdv.index') }}">Rendez-vous</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('manager.prospect.index') }}">Prospects</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ Auth::user()->name }}
-                                </a>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav ml-auto">
+                            @if(Auth::user()->roles()->first()->slug == "manager")
 
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Prospects</a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+
+                                            <li>
+                                                <a class="dropdown-item" href="{{ route('manager.prospect.index') }}">
+                                                    {{ __('Liste') }}
+                                                </a>
+                                            </li>
+
+                                        </ul>
                                     </li>
+                            @endif
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Rendez-vous</a>
+
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                    @if(Auth::user()->roles()->first()->slug == "agent")
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('agent.prospect.create') }}">
+                                            {{ __('Ajouter RDV') }}
+                                        </a>
+                                    </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('agent.rdv.index') }}">
+                                                {{ __('Liste RDV') }}
+                                            </a>
+                                        </li>
+                                    @endif
+                                        @if(Auth::user()->roles()->first()->slug == "manager")
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('manager.rdv.index') }}">
+                                                {{ __('Liste RDV') }}
+                                            </a>
+                                        </li>
+                                        @endif
 
                                 </ul>
                             </li>
-                        @endguest
-                    </ul>
+                             </ul>
+
+
+
                 </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi-person-circle"></i>   {{ Auth::user()->name }}
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <i class="bi-x-square-fill"></i> {{ __('Se déconnecter') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                @endguest
             </div>
         </nav>
 

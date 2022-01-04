@@ -16,7 +16,14 @@
                 <tbody>
                 @forelse($rdvs as $rdv)
                     <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
+                        <th scope="row">
+                            @if(Auth::user()->roles()->first()->slug == "agent")
+                            <a href=" {{ route('agent.rdv.show', ['id' => $rdv->id ]) }}">{{ $loop->iteration }}</a>
+                            @endif
+                                @if(Auth::user()->roles()->first()->slug == "manager")
+                                    <a href=" {{ route('manager.rdv.show', ['id' => $rdv->id ]) }}">{{ $loop->iteration }}</a>
+                                @endif
+                        </th>
                         <td>{{ $rdv->date }} à {{ $rdv->time }}</td>
                         <td>{{ $rdv->prospect()->first()->raison_sociale }}</td>
                         <td> {{ $rdv->rvp }}</td>
