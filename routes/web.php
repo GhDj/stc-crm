@@ -35,14 +35,22 @@ Route::group(['middleware' => 'role:developer'], function() {
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'prospect', 'as' => 'prospect.'], function () {
    Route::get('create', 'Agent\ProspectController@create')->name('create');
+   Route::get('show/{id}', 'Agent\ProspectController@show')->name('show');
    Route::post('create', 'Agent\ProspectController@store')->name('store');
 });
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'rdv', 'as' => 'rdv.'], function () {
     Route::get('/', 'Agent\RdvController@index')->name('index');
+    Route::get('show/{id}', 'Agent\RdvController@show')->name('show');
     Route::post('create', 'Agent\RdvController@store')->name('store');
 });
 
 Route::group(['middleware' => 'role:manager', 'prefix' => 'rdv', 'as' => 'rdv.'], function () {
     Route::get('/', 'Manager\RdvController@index')->name('index');
+    Route::get('show/{id}', 'Manager\RdvController@show')->name('show');
+});
+
+Route::group(['middleware' => 'role:manager', 'prefix' => 'prospect', 'as' => 'prospect.'], function () {
+    Route::get('/', 'Manager\ProspectController@index')->name('index');
+    Route::get('show/{id}', 'Manager\ProspectController@show')->name('show');
 });

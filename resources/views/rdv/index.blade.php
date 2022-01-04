@@ -20,7 +20,7 @@
                         <td>{{ $rdv->date }} à {{ $rdv->time }}</td>
                         <td>{{ $rdv->prospect()->first()->raison_sociale }}</td>
                         <td> {{ $rdv->rvp }}</td>
-                        <td> </td>
+                        <td> {{ $rdv->status }}</td>
                     </tr>
                 @empty
                     <tr></tr>

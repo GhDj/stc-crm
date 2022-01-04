@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Agent;
+namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\RdvStoreRequest;
-use App\Rdv;
+use App\Prospect;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class RdvController extends Controller
+class ProspectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +15,8 @@ class RdvController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        $rdvs = $user->rdvs()->paginate(10);
-        return view('rdv.index')->with(['rdvs' => $rdvs]);
-
+        $prospects = Prospect::paginate(15);
+        return view('prospect.index')->with(['prospects' => $prospects]);
     }
 
     /**
@@ -30,7 +26,7 @@ class RdvController extends Controller
      */
     public function create()
     {
-        return view('rdv.create');
+        //
     }
 
     /**
@@ -39,19 +35,9 @@ class RdvController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RdvStoreRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        unset($data['agent']);
-        $data['status'] = "En attente";
-        if (!empty($request->get('oppo')))
-        {
-            $data['rvp'] = $request->get('oppo');
-        } elseif (!empty($request->get('selectPj'))) {
-            $data['rvp'] = $request->get('selectPj');
-        }
-        $rdv = Rdv::create($data);
-        dd($rdv);
+        //
     }
 
     /**

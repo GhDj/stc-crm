@@ -28,4 +28,8 @@ class Prospect extends Model
     function user() {
         return $this->belongsTo(User::class);
     }
+
+    function rdv() {
+        return $this->hasOne(Rdv::class);
+    }
 }

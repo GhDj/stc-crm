@@ -33,9 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('rdv.index') }}">Rendez-vous</a>
-                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -47,6 +45,12 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('rdv.index') }}">Rendez-vous</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('prospect.index') }}">Prospects</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ Auth::user()->name }}
