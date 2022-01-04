@@ -52,6 +52,7 @@ class RdvController extends Controller
         }
         $rdv = Rdv::create($data);
         dd($rdv);
+        return redirect(route('agent.prospect.index'));
     }
 
     /**

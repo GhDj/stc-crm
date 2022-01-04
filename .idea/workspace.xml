@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/ngrok-stable-windows-amd64.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/ngrok.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Manager/ProspectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/ProspectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Manager/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/RdvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rdv/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/prospect/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/prospect/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -245,10 +251,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Correction des routes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641252509718">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641337626600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641252509718" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641337626600" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1641080290613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -294,11 +300,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641079332215" />
-    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1641293174652">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641337461808">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1641293174652" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641253307859" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641337461808" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1640823448978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

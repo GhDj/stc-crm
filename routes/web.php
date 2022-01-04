@@ -42,7 +42,7 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/prospect', 'as' =
 
 Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/rdv', 'as' => 'manager.rdv.'], function () {
     Route::get('/', 'Manager\RdvController@index')->name('index');
-    Route::get('show/{id}', 'Manager\RdvController@show')->name('show');
+    Route::get('/{id}', 'Manager\RdvController@show')->name('show');
 });
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/rdv', 'as' => 'agent.rdv.'], function () {
@@ -55,5 +55,5 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/rdv', 'as' => 'ag
 
 Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/prospect', 'as' => 'manager.prospect.'], function () {
     Route::get('/', 'Manager\ProspectController@index')->name('index');
-    Route::get('show/{id}', 'Manager\ProspectController@show')->name('show');
+    Route::get('/{id}', 'Manager\ProspectController@show')->name('show');
 });

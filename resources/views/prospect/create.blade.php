@@ -99,7 +99,7 @@
                                 <div class="form-floating mb-3">
                                     <input type="tel" class="form-control" id="tel" name="tel"
                                            placeholder="Portable" required>
-                                    <label for="tel">Ville</label>
+                                    <label for="tel">Portable</label>
                                 </div>
                             </div>
                             <div class="col-4">
