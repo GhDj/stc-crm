@@ -20,19 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stc-crm.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rdv/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +196,7 @@
       <workItem from="1641245220595" duration="416000" />
       <workItem from="1641251690832" duration="3783000" />
       <workItem from="1641282617468" duration="857000" />
-      <workItem from="1641285363956" duration="2536000" />
+      <workItem from="1641285363956" duration="5910000" />
     </task>
     <task id="LOCAL-00001" summary="Rdv creation">
       <created>1641086865968</created>
@@ -219,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641167856396</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Correction des routes">
+      <created>1641292778593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641292778593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +241,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Rdv creation" />
     <MESSAGE value="RDV listing" />
-    <option name="LAST_COMMIT_MESSAGE" value="RDV listing" />
+    <MESSAGE value="Correction des routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction des routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641252509718">
@@ -284,18 +285,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640823473450" />
-    <state x="552" y="234" key="Vcs.Push.Dialog.v2" timestamp="1641167908858">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="552" y="232" key="Vcs.Push.Dialog.v2" timestamp="1641292872147">
+      <screen x="0" y="0" width="1920" height="1032" />
     </state>
+    <state x="552" y="232" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1641292872147" />
     <state x="552" y="234" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641167908858" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1641079332215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641079332215" />
-    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1641291899015">
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup" timestamp="1641293174652">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1641291899015" />
+    <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1641293174652" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641253307859" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1640823448978">
       <screen x="0" y="0" width="1920" height="1040" />

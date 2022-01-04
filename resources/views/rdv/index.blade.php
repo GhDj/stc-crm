@@ -16,7 +16,7 @@
                 <tbody>
                 @forelse($rdvs as $rdv)
                     <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
+                        <th scope="row"><a href=" {{ route('agent.rdv.show', ['id' => $rdv->id ]) }}">{{ $loop->iteration }}</a></th>
                         <td>{{ $rdv->date }} à {{ $rdv->time }}</td>
                         <td>{{ $rdv->prospect()->first()->raison_sociale }}</td>
                         <td> {{ $rdv->rvp }}</td>

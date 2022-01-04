@@ -22,7 +22,7 @@
                                 @endforeach
                             </div>
                         @endif
-                        <form action="{{ route('prospect.store') }}" class="row align-items-center" method="post">
+                        <form action="{{ route('agent.prospect.store') }}" class="row align-items-center" method="post">
                             @csrf
                             <div class="col-4">
                                 <div class="form-floating mb-3">

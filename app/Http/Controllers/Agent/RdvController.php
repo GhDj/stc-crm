@@ -62,7 +62,8 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        //
+        $rdv = Rdv::findOrFail($id);
+        return view('rdv.show', ['rdv' => $rdv]);
     }
 
     /**

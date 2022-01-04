@@ -47,7 +47,7 @@ Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/rdv', 'as' =>
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/rdv', 'as' => 'agent.rdv.'], function () {
     Route::get('/', 'Agent\RdvController@index')->name('index');
-    Route::get('show/{id}', 'Agent\RdvController@show')->name('show');
+    Route::get('/{id}', 'Agent\RdvController@show')->name('show');
     Route::post('create', 'Agent\RdvController@store')->name('store');
 });
 
