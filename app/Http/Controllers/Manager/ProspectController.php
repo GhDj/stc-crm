@@ -1,20 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Agent;
+namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreProspectRequest;
 use App\Prospect;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Symfony\Component\HttpKernel\HttpCache\Store;
 
 class ProspectController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('role:agent');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +15,8 @@ class ProspectController extends Controller
      */
     public function index()
     {
-        //
+        $prospects = Prospect::paginate(15);
+        return view('prospect.index')->with(['prospects' => $prospects]);
     }
 
     /**
@@ -32,7 +26,7 @@ class ProspectController extends Controller
      */
     public function create()
     {
-        return view('prospect.create');
+        //
     }
 
     /**
@@ -41,17 +35,9 @@ class ProspectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProspectRequest $request)
+    public function store(Request $request)
     {
-        $data = $request->all();
-        $data['user_id'] = Auth::id();
-     //   dd($data);
-        $prospect = Prospect::create($data);
-      // dd($prospect);
-        return view('rdv.create')->with([
-           'prospect' => $prospect,
-            'user_id' => Auth::id()
-        ]);
+        //
     }
 
     /**

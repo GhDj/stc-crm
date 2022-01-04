@@ -3,18 +3,13 @@
 namespace App\Http\Controllers\Agent;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreProspectRequest;
-use App\Prospect;
+use App\Http\Requests\RdvStoreRequest;
+use App\Rdv;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Symfony\Component\HttpKernel\HttpCache\Store;
 
-class ProspectController extends Controller
+class RdvController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('role:agent');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +17,10 @@ class ProspectController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $rdvs = $user->rdvs()->paginate(10);
+        return view('rdv.index')->with(['rdvs' => $rdvs]);
+
     }
 
     /**
@@ -32,7 +30,7 @@ class ProspectController extends Controller
      */
     public function create()
     {
-        return view('prospect.create');
+        return view('rdv.create');
     }
 
     /**
@@ -41,17 +39,19 @@ class ProspectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProspectRequest $request)
+    public function store(RdvStoreRequest $request)
     {
         $data = $request->all();
-        $data['user_id'] = Auth::id();
-     //   dd($data);
-        $prospect = Prospect::create($data);
-      // dd($prospect);
-        return view('rdv.create')->with([
-           'prospect' => $prospect,
-            'user_id' => Auth::id()
-        ]);
+        unset($data['agent']);
+        $data['status'] = "En attente";
+        if (!empty($request->get('oppo')))
+        {
+            $data['rvp'] = $request->get('oppo');
+        } elseif (!empty($request->get('selectPj'))) {
+            $data['rvp'] = $request->get('selectPj');
+        }
+        $rdv = Rdv::create($data);
+        dd($rdv);
     }
 
     /**
