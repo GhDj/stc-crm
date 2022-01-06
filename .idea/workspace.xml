@@ -20,15 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3428108-3f75-4682-acee-8b9ff5af53cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/ngrok-stable-windows-amd64.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ngrok.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/NoteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/NoteStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/StatusStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Note.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Status.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_01_06_211444_create_notes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2022_01_06_221159_create_statuses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/status/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/ProspectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/ProspectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/RdvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Manager/ProspectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/ProspectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Manager/RdvController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Manager/RdvController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/prospect/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Rdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rdv.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/prospect/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/prospect/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rdv/show.blade.php" afterDir="false" />
@@ -203,6 +210,8 @@
       <workItem from="1641251690832" duration="3783000" />
       <workItem from="1641282617468" duration="857000" />
       <workItem from="1641285363956" duration="5910000" />
+      <workItem from="1641366462743" duration="626000" />
+      <workItem from="1641503303377" duration="6989000" />
     </task>
     <task id="LOCAL-00001" summary="Rdv creation">
       <created>1641086865968</created>
@@ -225,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641292778593</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Agent and manager show rdv and prospect">
+      <created>1641338630233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641338630234</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,9 +264,14 @@
     <MESSAGE value="Rdv creation" />
     <MESSAGE value="RDV listing" />
     <MESSAGE value="Correction des routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction des routes" />
+    <MESSAGE value="Agent and manager show rdv and prospect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agent and manager show rdv and prospect" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1641503349191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641503349191" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641337626600">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,28 +304,28 @@
     </state>
     <state width="1876" height="284" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1641283478885" />
     <state width="1876" height="187" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640822981278" />
-    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1641252080805">
+    <state x="794" y="439" key="NewPhpFileDialog" timestamp="1641507656500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641252080805" />
+    <state x="794" y="439" key="NewPhpFileDialog/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641507656500" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1640823473450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1640823473450" />
-    <state x="552" y="232" key="Vcs.Push.Dialog.v2" timestamp="1641292872147">
-      <screen x="0" y="0" width="1920" height="1032" />
+    <state x="552" y="234" key="Vcs.Push.Dialog.v2" timestamp="1641338636603">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="232" key="Vcs.Push.Dialog.v2/0.0.1920.1032@0.0.1920.1032" timestamp="1641292872147" />
-    <state x="552" y="234" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641167908858" />
+    <state x="552" y="234" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641338636603" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1641079332215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641079332215" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641337461808">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1641505189854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="223" width="672" height="673" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1641293174652" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641337461808" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-13.1920.1040@0.0.1920.1040" timestamp="1641505189854" />
     <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1640823448978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

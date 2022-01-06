@@ -2,14 +2,14 @@
 <project version="4">
   <component name="PublishConfigData" serverName="Stc CRM">
     <serverData>
-      <paths name="Jnaina SSH">
+      <paths name="Drupal">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Local Mailing Serve">
+      <paths name="Le JDE">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -23,6 +23,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="STW-2020">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Stc CRM">
         <serverdata>
           <mappings>
@@ -30,14 +37,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Test">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Tunisie Bio">
+      <paths name="localhost:8000">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
