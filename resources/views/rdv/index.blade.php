@@ -27,7 +27,7 @@
                         <td>{{ $rdv->date }} à {{ $rdv->time }}</td>
                         <td>{{ $rdv->prospect()->first()->raison_sociale }}</td>
                         <td> {{ $rdv->rvp }}</td>
-                        <td> {{ $rdv->status }}</td>
+                        <td> {{ App\Status::findOrFail($rdv->status)->status }}</td>
                     </tr>
                 @empty
                     <tr></tr>

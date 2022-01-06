@@ -45,9 +45,9 @@ class ProspectController extends Controller
     {
         $data = $request->all();
         $data['user_id'] = Auth::id();
-     //   dd($data);
+
         $prospect = Prospect::create($data);
-      // dd($prospect);
+
         return view('rdv.create')->with([
            'prospect' => $prospect,
             'user_id' => Auth::id()

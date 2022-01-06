@@ -15,4 +15,8 @@ class Rdv extends Model
     function user() {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    function notes() {
+        return $this->hasMany(Note::class, 'rdv_id');
+    }
 }

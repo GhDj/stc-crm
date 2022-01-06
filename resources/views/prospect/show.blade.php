@@ -43,7 +43,7 @@
                             <a href="#" class="list-group-item list-group-item-action py-3"><b>Date :</b> <span class="text-muted">{{ $prospect->rdv()->first()->date }}</span></a>
                             <a href="#" class="list-group-item list-group-item-action py-3"><b>Heure :</b> <span class="text-muted">{{ $prospect->rdv()->first()->time }} </span></a>
                             <a href="#" class="list-group-item list-group-item-action py-3"><b>Responsable :</b> <span class="text-muted">{{ $prospect->rdv()->first()->rvp }} </span></a>
-                            <a class="list-group-item list-group-item-action py-3"><b>Status :</b> <span class="text-muted">{{ $prospect->rdv()->first()->status }}</span></a>
+                            <a class="list-group-item list-group-item-action py-3"><b>Status :</b> <span class="text-muted">{{ $status_rdv }}</span>
                         </div>
                         <div class="card my-3">
                             <div class="card-header">

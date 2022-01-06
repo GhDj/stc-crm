@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
-use App\Rdv;
-use App\Status;
+use App\Http\Requests\NoteStoreRequest;
+use App\Note;
 use Illuminate\Http\Request;
 
-class RdvController extends Controller
+class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,7 @@ class RdvController extends Controller
      */
     public function index()
     {
-        $rdvs = Rdv::paginate(15);
-        return view('rdv.index')->with(['rdvs' => $rdvs]);
+        //
     }
 
     /**
@@ -36,9 +35,10 @@ class RdvController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NoteStoreRequest $request)
     {
-        //
+        $note = Note::create($request->all());
+        return redirect(route('manager.rdv.show', ['id' => $note->rdv_id]));
     }
 
     /**
@@ -49,10 +49,7 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        $rdv = Rdv::findOrFail($id);
-        $satus = Status::all();
-        $status_rdv = Status::findOrFail($rdv->status)->status;
-        return view('rdv.show', ['rdv' => $rdv, 'status' => $satus, 'status_rdv' => $status_rdv]);
+        //
     }
 
     /**
@@ -75,11 +72,7 @@ class RdvController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $rdv = Rdv::findOrFail($id);
-       $rdv->status = $request->get('status');
-       $rdv->save();
-
-       return redirect(route('manager.rdv.show', ['id' => $rdv]));
+        //
     }
 
     /**

@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Rdv;
+use App\Http\Requests\StatusStoreRequest;
 use App\Status;
 use Illuminate\Http\Request;
 
-class RdvController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class RdvController extends Controller
      */
     public function index()
     {
-        $rdvs = Rdv::paginate(15);
-        return view('rdv.index')->with(['rdvs' => $rdvs]);
+        $status = Status::all();
+        return view('status.index')->with(['status' => $status]);
     }
 
     /**
@@ -27,7 +26,7 @@ class RdvController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,9 +35,10 @@ class RdvController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StatusStoreRequest $request)
     {
-        //
+        Status::create($request->all());
+        return redirect()->back();
     }
 
     /**
@@ -49,10 +49,7 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        $rdv = Rdv::findOrFail($id);
-        $satus = Status::all();
-        $status_rdv = Status::findOrFail($rdv->status)->status;
-        return view('rdv.show', ['rdv' => $rdv, 'status' => $satus, 'status_rdv' => $status_rdv]);
+        //
     }
 
     /**
@@ -75,11 +72,7 @@ class RdvController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $rdv = Rdv::findOrFail($id);
-       $rdv->status = $request->get('status');
-       $rdv->save();
-
-       return redirect(route('manager.rdv.show', ['id' => $rdv]));
+        //
     }
 
     /**
@@ -90,6 +83,8 @@ class RdvController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $status = Status::findOrFail($id);
+        $status->delete();
+        return redirect()->back();
     }
 }

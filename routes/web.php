@@ -30,6 +30,12 @@ Route::group(['middleware' => 'role:developer'], function() {
         return 'Welcome Admin';
 
     });
+    Route::group(['as' => 'status.','prefix' => 'status'], function() {
+        Route::get('/', 'StatusController@index')->name('index');
+        Route::post('/', 'StatusController@store')->name('store');
+        Route::delete('/{id}', 'StatusController@destroy')->name('destroy');
+    });
+
 
 });
 
@@ -43,6 +49,7 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/prospect', 'as' =
 Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/rdv', 'as' => 'manager.rdv.'], function () {
     Route::get('/', 'Manager\RdvController@index')->name('index');
     Route::get('/{id}', 'Manager\RdvController@show')->name('show');
+    Route::put('/{id}', 'Manager\RdvController@update')->name('update');
 });
 
 Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/rdv', 'as' => 'agent.rdv.'], function () {
@@ -56,4 +63,8 @@ Route::group(['middleware' => 'role:agent', 'prefix' => 'agent/rdv', 'as' => 'ag
 Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/prospect', 'as' => 'manager.prospect.'], function () {
     Route::get('/', 'Manager\ProspectController@index')->name('index');
     Route::get('/{id}', 'Manager\ProspectController@show')->name('show');
+});
+
+Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/note', 'as' => 'manager.note.'], function () {
+    Route::post('store', 'Manager\NoteController@store')->name('store');
 });
