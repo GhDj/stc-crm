@@ -40,8 +40,9 @@
 
 
 
-        <div class="row">
-            {{ $prospects->links() }}
+        <div class="row text-center">
+            {{ $prospects->links('vendor.pagination.stc') }}
+
         </div>
 
     </div>

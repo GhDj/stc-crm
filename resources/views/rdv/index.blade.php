@@ -37,7 +37,7 @@
 
 
         <div class="row">
-            {{ $rdvs->links() }}
+            {{ $rdvs->links('vendor.pagination.stc')}}
         </div>
 
     </div>

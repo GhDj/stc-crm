@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Agent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RdvStoreRequest;
 use App\Rdv;
+use App\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -42,8 +43,10 @@ class RdvController extends Controller
     public function store(RdvStoreRequest $request)
     {
         $data = $request->all();
+
+
         unset($data['agent']);
-        $data['status'] = "En attente";
+        $data['status'] = Status::first()->id;
         if (!empty($request->get('oppo')))
         {
             $data['rvp'] = $request->get('oppo');
@@ -51,8 +54,8 @@ class RdvController extends Controller
             $data['rvp'] = $request->get('selectPj');
         }
         $rdv = Rdv::create($data);
-        dd($rdv);
-        return redirect(route('agent.prospect.index'));
+
+        return redirect(route('agent.rdv.index'));
     }
 
     /**
@@ -63,10 +66,19 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        /*$rdv = Rdv::findOrFail($id);
+       /* $rdv = Rdv::findOrFail($id);
         return view('rdv.show', ['rdv' => $rdv]);*/
+
+        $rdv = Rdv::findOrFail($id);
+        if (Auth::id() == $rdv->user()->first()->id) {
+            $satus = Status::all();
+            $status_rdv = Status::findOrFail($rdv->status)->status;
+            return view('rdv.show', ['rdv' => $rdv, 'status' => $satus, 'status_rdv' => $status_rdv]);
+        } else {
+            return redirect()->back();
+        }
         // TODO : rdv show for agents
-        return redirect()->back();
+      //  return redirect()->back();
     }
 
     /**
