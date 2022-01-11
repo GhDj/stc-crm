@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Manager;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Prospect;
-use App\Rdv;
-use App\Status;
+use App\User;
 use Illuminate\Http\Request;
 
-class RdvController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,9 @@ class RdvController extends Controller
      */
     public function index()
     {
-        $rdvs = Rdv::paginate(15);
-        return view('rdv.index')->with(['rdvs' => $rdvs]);
+        $users = User::paginate(15);
+        //dd($users);
+        return view('user.index')->with(['users' => $users]);
     }
 
     /**
@@ -50,19 +49,7 @@ class RdvController extends Controller
      */
     public function show($id)
     {
-        /*$rdv = Rdv::findOrFail($id);
-        $satus = Status::all();
-        $status_rdv = Status::findOrFail($rdv->status)->status;
-        return view('rdv.show', ['rdv' => $rdv, 'status' => $satus, 'status_rdv' => $status_rdv]);*/
-       // dd($id);
-        $rdv = Rdv::findOrFail($id);
-        $prospect = $rdv->prospect()->first();
-       // dd($prospect);
-        $status = Status::all();
-        return view('prospect.show', [
-            'prospect' => $prospect,
-            'status' => $status
-        ]);
+        //
     }
 
     /**
@@ -85,11 +72,7 @@ class RdvController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $rdv = Rdv::findOrFail($id);
-       $rdv->status = $request->get('status');
-       $rdv->save();
-
-       return redirect()->back();
+        //
     }
 
     /**
@@ -100,6 +83,8 @@ class RdvController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->back();
     }
 }

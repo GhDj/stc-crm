@@ -41,14 +41,14 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control datepicker" id="dateRDV" name="time"/>
+                                        <input type="date" class="form-control datepicker" id="dateRDV" name="date"/>
                                         <label for="dateRDV" class="form-label">Selectionner date</label>
 
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-floating">
-                                        <input type="time" class="form-control datepicker" id="timeRDV" name="date"/>
+                                        <input type="time" class="form-control datepicker" id="timeRDV" name="time"/>
                                         <label for="timeRDV" class="form-label">Selectionner l'heure</label>
 
 

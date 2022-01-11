@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
 use App\Prospect;
+use App\Status;
 use Illuminate\Http\Request;
 
 class ProspectController extends Controller
@@ -15,7 +16,7 @@ class ProspectController extends Controller
      */
     public function index()
     {
-        $prospects = Prospect::paginate(15);
+        $prospects = Prospect::paginate(5);
         return view('prospect.index')->with(['prospects' => $prospects]);
     }
 
@@ -49,7 +50,11 @@ class ProspectController extends Controller
     public function show($id)
     {
         $prospect = Prospect::findOrFail($id);
-        return view('prospect.show', ['prospect' => $prospect]);
+        $status = Status::all();
+        return view('prospect.show', [
+            'prospect' => $prospect,
+            'status' => $status
+        ]);
     }
 
     /**

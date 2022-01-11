@@ -47,7 +47,16 @@
                             @endif
                         </ul>
                         @else
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <ul class="navbar-nav ml-auto">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                @if(Auth::user()->roles()->first()->slug == "developer")
+                                    <li class="nav-item">
+                                        <a href="{{ route('user.index') }}" class="nav-link">Utilisateur</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('status.index') }}" class="nav-link">Status</a>
+                                    </li>
+                                    @endif
                             @if(Auth::user()->roles()->first()->slug == "manager")
 
                                     <li class="nav-item dropdown">
@@ -64,7 +73,7 @@
                                         </ul>
                                     </li>
                             @endif
-
+                                    @if((Auth::user()->roles()->first()->slug == "agent") || (Auth::user()->roles()->first()->slug == "manager"))
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Rendez-vous</a>
 
@@ -81,14 +90,14 @@
                                             </a>
                                         </li>
                                     @endif
-                                        @if(Auth::user()->roles()->first()->slug == "manager")
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('manager.rdv.index') }}">
-                                                {{ __('Liste RDV') }}
-                                            </a>
-                                        </li>
+                                    @if(Auth::user()->roles()->first()->slug == "manager")
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('manager.rdv.index') }}">
+                                            {{ __('Liste RDV') }}
+                                        </a>
+                                    </li>
+                                    @endif
                                         @endif
-
                                 </ul>
                             </li>
                              </ul>

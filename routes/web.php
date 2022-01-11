@@ -30,6 +30,11 @@ Route::group(['middleware' => 'role:developer'], function() {
         return 'Welcome Admin';
 
     });
+    Route::group(['as' => 'user.','prefix' => 'user'], function() {
+        Route::get('/', 'Admin\UserController@index')->name('index');
+        Route::delete('/{id}', 'Admin\UserController@destroy')->name('destroy');
+    });
+
     Route::group(['as' => 'status.','prefix' => 'status'], function() {
         Route::get('/', 'StatusController@index')->name('index');
         Route::post('/', 'StatusController@store')->name('store');

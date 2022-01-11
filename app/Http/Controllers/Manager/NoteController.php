@@ -38,7 +38,7 @@ class NoteController extends Controller
     public function store(NoteStoreRequest $request)
     {
         $note = Note::create($request->all());
-        return redirect(route('manager.rdv.show', ['id' => $note->rdv_id]));
+        return redirect()->back();
     }
 
     /**
