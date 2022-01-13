@@ -4,6 +4,9 @@
     <div class="container shadow rounded-2 p-0">
         <h3 class="modal-title p-3">Prospects</h3>
         <div class="container">
+            <div id="app">
+                <datatable-component></datatable-component>
+            </div>
             <table class="table table-striped">
                 <thead>
                 <tr>

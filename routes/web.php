@@ -73,3 +73,7 @@ Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/prospect', 'a
 Route::group(['middleware' => 'role:manager', 'prefix' => 'manager/note', 'as' => 'manager.note.'], function () {
     Route::post('store', 'Manager\NoteController@store')->name('store');
 });
+
+/*Route::get('/prospects', function () {
+    return view('home');
+})->where('any', '.*');*/
